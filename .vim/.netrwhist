@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/ignasi/.sbt/0.13/plugins/plugins.sbt'
+let g:netrw_dirhist_2='/Users/ignasi/wip/deleteme/hello/hello-stream-api/src/main/scala/com/example'
+let g:netrw_dirhist_3='/Users/ignasi/wip/deleteme/hello/hello-stream-api/src/main/scala/com/example/hellostream'
+let g:netrw_dirhist_4='/Users/ignasi/wip/deleteme/hello/hello-stream-api/src/main/scala/com/example/hellostream/api'
+let g:netrw_dirhist_5='/Users/ignasi/git/projects/lightbend/playframework/playframework/scripts'
+let g:netrw_dirhist_6='/Users/ignasi/.oh-my-zsh/themes'
