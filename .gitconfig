@@ -1,0 +1,102 @@
+[alias]
+  # Show verbose output about tags, branches or remotes
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  # Pretty log output
+  hist = log --graph --pretty=format:'%Cred%h%Creset %s%C(yellow)%d%Creset %Cgreen(%cr)%Creset [%an]' --abbrev-commit --date=relative
+  # Shortcuts
+  co = checkout
+  br = branch
+  st = status
+  stat = status
+  #
+  # # ff = fast-forward:
+  # # Pulls upstream changes and updates the local branch to match.
+  # # Fails if there are local changes that aren't on the remote,
+  # # in which case you should rebase.
+  ff = pull --ff-only
+  #
+  # # fff = fast-fast-forward:
+  # # Just like "ff" but doesn't fetch from the remote. Use this if you've
+  # # recently fetched and just need to update your local branch
+  fff = merge --ff-only
+  
+  graph = log --graph    --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'    --abbrev-commit    --date=relative
+  authors = shortlog -sne
+  #
+  # Prints a list of conflicting files.
+  # You can use `git conflicts|xargs $EDITOR` to open them all
+  # in your favorite editor.
+  conflicts = diff --name-only --diff-filter=U
+ 
+  serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+  
+  lg0 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+  lg = !git lg1
+
+[fetch]
+  prune = true
+
+[color]
+  # Use colors in Git commands that are capable of colored output when outputting to the terminal
+  ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+# Use `upstream` as the default remote on the `master` branch in all cases
+[branch "master"]
+  remote = upstream
+  merge = refs/heads/master
+
+[user]
+	name = Ignasi Marimon-Clos
+	email = ignasi@lightbend.com
+[github]
+	user = ignasi35
+[core]
+	excludesfile = /Users/ignasi/.gitignore_global
+        pager = delta --dark --plus-color="#012800" --minus-color="#340001"
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/ignasi/.stCommitMsg
+	verbose = true
+[diff]
+	colorMoved = default
+
+[pull]
+	rebase = true
+[push]
+   # "simple" is the default in Git 2.0+, but make it explicit
+   # in case I ever end up using an older version of git.
+   default = simple
+
+
+[stash]
+   showPatch = true
+
+[filesystem "AdoptOpenJdk|1.8.0_202|/dev/disk1"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+
+[hub]
+	protocol = https
