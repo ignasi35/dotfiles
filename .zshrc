@@ -124,3 +124,6 @@ export LANG=en_US.UTF-8
 export SDKMAN_DIR="/Users/ignasi/.sdkman"
 [[ -s "/Users/ignasi/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/ignasi/.sdkman/bin/sdkman-init.sh"
 
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
