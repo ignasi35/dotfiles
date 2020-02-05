@@ -1,0 +1,12 @@
+.DS_Store
+.envrc
+.idea
+*.iml
+.prinfo
+.bloop/
+.metals/
+project/metals.sbt
+project/.bloop/
+.vscode/settings.json
+build/
+target/
