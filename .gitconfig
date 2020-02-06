@@ -10,6 +10,10 @@
   br = branch
   st = status
   stat = status
+  
+  ##  Summary of branches sorted reverse by date
+  brs = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+ 
   #
   # # ff = fast-forward:
   # # Pulls upstream changes and updates the local branch to match.
@@ -70,7 +74,13 @@
 [core]
 	excludesfile = /Users/ignasi/.gitignore_global
         pager = delta --dark --plus-color="#012800" --minus-color="#340001"
+	editor = code --wait
 
+[diff]
+	colorMoved = default
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -80,8 +90,8 @@
 [commit]
 	template = /Users/ignasi/.stCommitMsg
 	verbose = true
-[diff]
-	colorMoved = default
+
+
 
 [pull]
 	rebase = true
