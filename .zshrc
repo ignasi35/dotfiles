@@ -127,3 +127,7 @@ export SDKMAN_DIR="/Users/ignasi/.sdkman"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+## These two scripts must be source'd here because they depend on plugins enable in the `.zshrc` file. Don't 
+## move the lines below to `.zprofile` because that file is loaded before `.zshrc`.
+source $GITHUB_SRC/renatocaval/oh-my-git/master/git-functions.sh
+source $GITHUB_SRC/renatocaval/oh-my-git/master/gh-functions.sh
