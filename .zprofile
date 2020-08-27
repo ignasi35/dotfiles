@@ -53,3 +53,10 @@ todo () {
 export GITHUB_SRC=/Users/ignasi/git/github
 export GITHUB_USER=ignasi35
 
+
+# >>> coursier install directory >>>
+export PATH="$PATH:/Users/ignasi/Library/Application Support/Coursier/bin"
+# <<< coursier install directory <<<
+
+export PATH="$PATH:/Applications/Firefox.app/Contents/MacOS"
+export PATH="$PATH:/Users/ignasi/git/github/ignasi35/morning-tasks/master"

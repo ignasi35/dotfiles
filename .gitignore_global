@@ -1,5 +1,6 @@
 .DS_Store
 .envrc
+.sdkmanrc
 .idea
 *.iml
 .prinfo
@@ -10,3 +11,4 @@ project/.bloop/
 .vscode/settings.json
 build/
 target/
+docs-source/.vscode

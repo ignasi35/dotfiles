@@ -73,7 +73,7 @@
 	user = ignasi35
 [core]
 	excludesfile = /Users/ignasi/.gitignore_global
-        pager = delta --dark --plus-color="#012800" --minus-color="#340001"
+        pager = "delta --dark --plus-color=#012800 --minus-color=#340001"
 	editor = code --wait
 
 [diff]
@@ -110,3 +110,24 @@
 
 [hub]
 	protocol = https
+[filesystem "AdoptOpenJDK|1.8.0_232|/dev/disk1s2"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "AdoptOpenJDK|1.8.0_242|/dev/disk1s2"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "Oracle Corporation|1.8.0_242|/dev/disk1s2"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "AdoptOpenJDK|1.8.0_252|/dev/disk1s2"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "AdoptOpenJDK|11.0.7|/dev/disk1s2"]
+	timestampResolution = 5000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
+[credential]
+	helper = !aws codecommit credential-helper $@
+	UseHttpPath = true
+[filesystem "AdoptOpenJDK|1.8.0_265|/dev/disk1s2"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
